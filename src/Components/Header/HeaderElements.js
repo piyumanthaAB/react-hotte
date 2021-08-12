@@ -6,7 +6,7 @@ import HeaderCover from './../../img/header.jpg';
 export const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
-    min-height: 70vh;
+    min-height: 65vh;
     background-color: red;
     background-image: url(${HeaderCover});
     background-repeat: no-repeat;

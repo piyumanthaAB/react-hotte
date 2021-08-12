@@ -8,7 +8,18 @@ import { BiMenu } from "react-icons/bi";
 
 const Navbar = () => {
 
-    const [expand, setExpand] = useState(true)
+    const [expand, setExpand] = useState(true);
+    const [openNow, setOpenNow] = useState('.....');
+
+    setInterval(() => {
+        const d = new Date();
+        if (d.getHours() >= 23 || d.getHours() < 8) {
+            setOpenNow('Closed');
+        } else {
+            setOpenNow('Open')
+        }
+    }, 10);
+
 
     return (
         
@@ -17,7 +28,7 @@ const Navbar = () => {
                 <nav.NavbarBrad>
                 <nav.NavbarBrandImage src={ LogoSrc}/>
                     <nav.NavbarBrandTextContainer>
-                        <nav.NavbrandText color={'#c5331f'}><MdQueryBuilder/> Open Now</nav.NavbrandText>
+                        <nav.NavbrandText color={'#c5331f'}><MdQueryBuilder/> {openNow} Now</nav.NavbrandText>
                         <nav.NavbrandText color={'#a0cc3a'}>8AM - 10PM</nav.NavbrandText>
                     </nav.NavbarBrandTextContainer>
                 </nav.NavbarBrad>
