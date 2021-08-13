@@ -62,7 +62,7 @@ export const FooterIcon = styled.a`
     align-items: center;
     
     &:not(:last-child){
-        margin-right: .7rem;
+        margin-right: .5rem;
     }
 
     &:hover{

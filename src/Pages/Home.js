@@ -1,6 +1,11 @@
+import VideoAd from "../Components/VideoAd/VideoAd";
+
 const Home = () => {
     return (
-        <h1>This is HOME page</h1>
+        <>
+            <h1>This is home</h1>
+            <VideoAd/>
+        </>
      );
 }
  
