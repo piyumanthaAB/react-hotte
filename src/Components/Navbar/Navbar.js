@@ -13,7 +13,7 @@ const Navbar = () => {
 
     setInterval(() => {
         const d = new Date();
-        if (d.getHours() >= 23 || d.getHours() < 8) {
+        if (d.getHours() >= 22 || d.getHours() < 8) {
             setOpenNow('Closed');
         } else {
             setOpenNow('Open')

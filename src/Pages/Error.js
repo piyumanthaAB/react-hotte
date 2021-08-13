@@ -18,7 +18,7 @@ const Error = () => {
                 <E.ErrorParagraph>
                 There are many variations of passages of Lorem Ipsum available but majority have suffered alteration injected humour
                 </E.ErrorParagraph>
-                <Button btText={'<< Back to Home'} />
+                <Button btText={'<< Back to Home'}  to='/'/>
                 
             </E.ErrorMessage>
             <VideoAd/>
