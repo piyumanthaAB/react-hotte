@@ -7,6 +7,8 @@ export const CustomHeading = styled.p`
     letter-spacing: ${props => props.space || "initial"};
     padding:${props => props.padding || "initial"} ;
     margin:${props => props.margin || "initial"} ;
+    line-height:${props => props.lineHeight || "initial"} ;
+
 `
 
 export const CustomSpan = styled.span`

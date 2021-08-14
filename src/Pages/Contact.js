@@ -1,7 +1,7 @@
 import Header from "../Components/Header/Header";
 import VideoAd from "../Components/VideoAd/VideoAd";
 import HeaderSecondary from "../Components/Header/HeaderSecondary";
-import ContactForm from "../Components/Forms/ContactForm";
+
 
 import { BiPhoneCall,BiMailSend } from "react-icons/bi";
 import { MdLocationOn} from "react-icons/md";
@@ -39,7 +39,7 @@ const Cotact = () => {
         <>
             <Header mainTitle={"Contact"} secondaryTitle={"Contact"} />
             <HeaderSecondary data={seconadryHeadingData} />
-            <ContactForm submit={ url}/>
+            
             <VideoAd />
         </>
      );
