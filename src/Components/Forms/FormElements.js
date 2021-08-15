@@ -8,7 +8,8 @@ export const Form = styled.form`
 export const FormInput = styled.input`
     width: 100%;
     padding: 1rem;
-    border: 1px solid #ced4da;
+    /* border: 1px solid #ced4da; */
+    border:${props=> props.border || "1px solid #ced4da"};
     color: #696969;
     border-radius: .3rem;
     transition: all .3s;
@@ -21,12 +22,16 @@ export const FormInput = styled.input`
     }
     
 `
+export const FormLabel = styled.label`
+    color: #494442;
+    font-size: 1.4rem;
+`
 
 export const FormTextArea = styled.textarea`
     margin: 1rem 0;
     width: 100%;
     padding: 1rem;
-    border: 1px solid #ced4da;
+    border:${props=> props.border || "1px solid #ced4da"};
     color: #696969;
     border-radius: .3rem;
     transition: all .3s;
@@ -43,7 +48,9 @@ export const FormSubmitBtn = styled.button`
     border: 1px solid transparent;
     font-family: "Poppins", sans-serif;
     padding: 1rem 2rem;
-    border-radius: .5rem;
+    /* border-radius: .5rem; */
+    border-radius: ${props=>props.borderRadius || ".5rem"};
+    margin: ${props=>props.margin || "0"};
     cursor: pointer;
     transition: all .3s;
     position: relative;
@@ -59,4 +66,19 @@ export const FormSubmitBtn = styled.button`
         border: 1px solid #ff702a;
         background-image: linear-gradient(to right,white, white);
     }
+`
+
+export const FormDropdown = styled.select`
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    border-radius: .3rem;
+    font-family: "Poppins", sans-serif;
+    color: #696969;
+
+`;
+
+export const FormDropdownOption = styled.option`
+    font-family: "Poppins", sans-serif;
 `

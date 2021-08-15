@@ -110,8 +110,8 @@ const SinglePost = () => {
                             </B.BlogComment>
                         </B.BlogCommentRow>
 
-                        <CustomHeading weight={"600"} size={"3rem"} color={ "#232323"}>
-                            Leave A Comment :
+                        <CustomHeading weight={"600"} size={"3rem"} margin={"0 0 2rem"} color={ "#232323"}>
+                            Leave a Comment :
                         </CustomHeading>
 
                         <B.BlogCommentFormContainer>
