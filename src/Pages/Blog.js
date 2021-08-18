@@ -19,6 +19,9 @@ import img_7 from './../img/blog7.png'
 import img_8 from './../img/blog8.png'
 import img_9 from './../img/blog9.png'
 
+import ToTopBtn from "../Components/Button/ToTopBtn";
+import useShowBtn  from './../Hooks/useShowBtn';
+
 const Blog = () => {
     
     const seconadryHeadingData = [
@@ -108,12 +111,15 @@ const Blog = () => {
         }
     ]
 
+    const showBtn = useShowBtn();
+
     return (
         <>
             <Header mainTitle={"Blog"} secondaryTitle={"Blog"} />
             <HeaderSecondary data={seconadryHeadingData} />
             <BlogCards blogs={blogPosts} />
             <VideoAd />
+            <ToTopBtn show={showBtn} />
         </>
     );
 }

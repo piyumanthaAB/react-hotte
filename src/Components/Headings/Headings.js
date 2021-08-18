@@ -15,5 +15,6 @@ export const CustomSpan = styled.span`
     font-size: ${props => props.size || "1rem"};
     font-weight: ${props => props.weight || "300"};
     color: ${props => props.color || "black"};
-    letter-spacing: ${props=>props.space || "initial"};
+    letter-spacing: ${props => props.space || "initial"};
+    border-bottom: ${props => props.bottomBorder || "initial"};
 `

@@ -10,39 +10,41 @@ import Error from './Pages/Error';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 
+import ScrollToTop from './Hooks/useScrollTop';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar/>
+      <ScrollToTop>
+        <div className="App">
+          <Navbar />
         
-        <div className="content">
+          <div className="content">
             <Switch>
               <Route exact path='/'>
-                <Home/>
+                <Home />
               </Route>
               <Route exact path='/about'>
-                <About/>
+                <About />
               </Route>
               <Route exact path='/blog'>
-                <Blog/>
+                <Blog />
               </Route>
               <Route exact path='/post/:id'>
-                <BlogPost/>
+                <BlogPost />
               </Route>
               <Route exact path='/contact'>
-                <Contact/>
+                <Contact />
               </Route>
               <Route path='*'>
-                <Error/>
+                <Error />
               </Route>
 
             </Switch>
+          </div>
+          <Footer />
         </div>
-        <Footer/>
-      </div>
-
+      </ScrollToTop>
     </Router>
   );
 }

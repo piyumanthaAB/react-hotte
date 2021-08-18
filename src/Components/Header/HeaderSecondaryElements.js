@@ -6,7 +6,9 @@ export const SecondaryContainer = styled.div`
     display: flex;
     min-height: 25vh;
     flex:1 ;
-    padding: 2rem 20rem;
+    /* padding: 2rem 20rem; */
+    padding: ${props=> props.padding || "2rem 20rem"};
+    border-radius: ${props=> props.borderRadius || "initial"};
     background-color: #ff702a;
     /* opacity: .5; */
     /* margin-bottom: 20rem; */
@@ -33,7 +35,6 @@ export const SecondaryInfoElement = styled.div`
     flex: 1;
     align-items: center;
 
-    
 `
 
 export const SecondaryIcon = styled.div`

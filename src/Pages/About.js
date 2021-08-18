@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CustomHeading,CustomSpan } from './../Components/Headings/Headings';
+import { CustomSpan } from './../Components/Headings/Headings';
 import Header from "../Components/Header/Header";
 import VideoAd from "../Components/VideoAd/VideoAd";
 import HeaderSecondary from "../Components/Header/HeaderSecondary";
@@ -18,6 +18,9 @@ import chef_5 from './../img/chefs5.png';
 import chef_6 from './../img/chefs6.png';
 
 import { AboutChefsImg } from './../Components/_About Page/AboutPageElements';
+import ToTopBtn from "../Components/Button/ToTopBtn";
+
+import useShowBtn  from './../Hooks/useShowBtn';
 
 const About = () => {
 
@@ -136,7 +139,7 @@ const About = () => {
         }
     ]
 
-
+    const showBtn = useShowBtn();
 
     return (
         <>
@@ -145,6 +148,7 @@ const About = () => {
             <AboutStory Title={Title} P1={P1} P2={P2} handleMission={handleMission} handleStory={ handleStory} handleVision={handleVision} />
             <AboutChefs data={chefsData} />
             <VideoAd />
+            <ToTopBtn show={showBtn} />
         </>    
      );
 }

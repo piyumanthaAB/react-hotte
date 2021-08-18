@@ -25,12 +25,11 @@ export const NavbarContainer = styled.div`
     left: 0;
     z-index: 1000000;
     width: 100vw;
-    min-height: 10vh;
     background-color: green;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 20rem;
+    padding: .5rem 20rem;
     background-color: #222222ba;
     font-family: "Poppins", sans-serif;
     flex-wrap: wrap;
@@ -82,14 +81,14 @@ export const NavbrandText = styled.p`
 
 
 export const NavLinks = styled(motion.div)`
-    flex: 0 1 50%;
+    flex: 0 1 45%;
     background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ff702a;
+    background-color: #ec5a12;
     border-radius: 5rem;
-    padding: .7rem 1rem;
+    padding: .7rem 0rem .7rem 3rem;
 
     /* transform: translateY(-20rem); */
 
@@ -164,7 +163,7 @@ export const NavNumberConainer = styled.div`
 
 export const NavNumber = styled.p`
     color: white;
-    padding:1.5rem 2rem;
+    padding:1rem 2rem;
     font-size: 1.5rem;
     transition: all .3s;
 

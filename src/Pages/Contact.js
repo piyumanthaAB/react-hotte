@@ -6,6 +6,9 @@ import ContactForm from "../Components/_Contact Page/ContactForm";
 import { BiPhoneCall,BiMailSend } from "react-icons/bi";
 import { MdLocationOn} from "react-icons/md";
 
+import ToTopBtn from "../Components/Button/ToTopBtn";
+import useShowBtn  from './../Hooks/useShowBtn';
+
 const Cotact = () => {
 
     const seconadryHeadingData = [
@@ -34,13 +37,16 @@ const Cotact = () => {
 
     const url='';
     
-
+    const showBtn = useShowBtn();
+    
     return (
         <>
             <Header mainTitle={"Contact"} secondaryTitle={"Contact"} />
             <HeaderSecondary data={seconadryHeadingData} />
             <ContactForm/>
             <VideoAd />
+            <ToTopBtn show={showBtn} />
+
         </>
      );
 }
