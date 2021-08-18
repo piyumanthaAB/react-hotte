@@ -15,7 +15,7 @@ import ScrollToTop from './Hooks/useScrollTop';
 function App() {
   return (
     <Router>
-      <ScrollToTop>
+      <ScrollToTop >
         <div className="App">
           <Navbar />
         

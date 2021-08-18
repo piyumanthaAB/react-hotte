@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import { Link } from "react-router-dom";
+import { Link as ScrollLink } from 'react-scroll';
 
 export const ButtonContainer = styled(Link)`
     min-width: 10rem;
@@ -26,7 +27,7 @@ export const ButtonContainer = styled(Link)`
     }
 `
 
-export const ButtonContainerA = styled.a`
+export const ButtonContainerA = styled(ScrollLink)`
     max-width: max-content;
     padding: .8rem 2.2rem;
     border-radius: 50rem;

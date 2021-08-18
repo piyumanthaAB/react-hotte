@@ -19,7 +19,8 @@ const HomeHeader = () => {
                         Have any food on your mind? <CustomSpan size={"1.6rem"} weight={ "400"} color={" #ec5a12"}>Just order now!</CustomSpan> 
                     </CustomHeading>
                     
-                    <ButtonA size={"1.5rem"} href="" btnText="Today's Menue >>" />
+                    <ButtonA to="menue" smooth={true} duration={1000} size={"1.5rem"} btnText="Today's Menue >>" />
+
                 </H.HomeHeaderLeft>
                 <H.HomeHeaderBubbleImg src={bubble} />
                 <H.HomeHeaderRight>

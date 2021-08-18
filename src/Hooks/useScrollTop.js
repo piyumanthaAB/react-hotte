@@ -8,7 +8,11 @@ const ScrollToTop = ({children}) => {
     const { pathname } = useLocation();
 
     useEffect(() => {
-        scroll.scrollToTop();
+        scroll.scrollToTop({
+            duration: 100,
+            delay: 0,
+            smooth: "linear"
+        });
     }, [pathname]);
 
     return children;

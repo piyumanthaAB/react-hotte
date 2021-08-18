@@ -14,7 +14,7 @@ import menu_6 from './../../img/food6.png';
 const Menue = () => {
     return (
         <>
-            <M.MenueContainer>
+            <M.MenueContainer id="menue">
                 <M.MenueTitleContainer>
                     
                     <CustomHeading lineHeight={"1.2"} size={"3.8rem"} weight={"700"} color={"#0a0626"}>
