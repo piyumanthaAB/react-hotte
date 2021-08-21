@@ -19,5 +19,6 @@ export const CustomSpan = styled.span`
     border-bottom: ${props => props.bottomBorder || "initial"};
 `
 export const ColorSpan = styled.span`
-    color:#ff702a;
+    /* color:#ff702a; */
+    color: ${props=>props.color || "#ff702a"};
 `
