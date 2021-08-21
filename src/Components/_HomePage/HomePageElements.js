@@ -901,11 +901,90 @@ export const TodaysOfferContainer = styled.div`
     padding: 5rem 20rem;
     /* background-color: red; */
     display: flex;
+
+    @media screen and (max-width:1400px){
+        padding: 5rem 10rem;
+    }
+    
+    @media screen and (max-width:1000px){
+        padding: 5rem 5rem;
+        
+
+    }
+    @media screen and (max-width:760px){
+        padding: 5rem 5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    @media screen and (max-width:500px){
+        padding: 5rem 2rem;
+
+    }
 `
 
 export const TodaysOfferLeft = styled.div`
     flex: 0 1 48%;
 `;
+
+export const TodaysOfferTitle = styled.p`
+    font-size: 6rem;
+    font-weight: 700;
+    color: white;
+
+    @media screen and (max-width:1200px){
+       font-size: 5.3rem;
+    }
+    @media screen and (max-width:1100px){
+       font-size: 5rem;
+    }
+    @media screen and (max-width:1000px){
+       font-size: 4.5rem;
+    }
+    @media screen and (max-width:900px){
+       font-size: 4rem;
+    }
+    @media screen and (max-width:760px){
+       font-size: 4.5rem;
+    }
+    @media screen and (max-width:600px){
+       font-size: 4rem;
+    }
+    @media screen and (max-width:400px){
+       font-size: 3rem;
+    }
+`
+
+export const TodaysOfferText = styled.p`
+    line-height: 1.4;
+    font-size: 1.6rem;
+    color: #dccece;
+
+    @media screen and (max-width:1200px){
+       font-size: 1.4rem;
+    }
+
+    @media screen and (max-width:1100px){
+       font-size: 1.2rem;
+    }
+    @media screen and (max-width:1000px){
+       font-size: 1.3rem;
+    }
+    @media screen and (max-width:900px){
+       font-size: 1.2rem;
+    }
+
+    @media screen and (max-width:760px){
+       font-size:1.4rem;
+    }
+    @media screen and (max-width:600px){
+       font-size:1.2rem;
+    }
+    @media screen and (max-width:400px){
+       font-size: 1rem;
+    }
+`
 
 export const TodaysOfferRight = styled.div`
     flex: 0 1 48%;

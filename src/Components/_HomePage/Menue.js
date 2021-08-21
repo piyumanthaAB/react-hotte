@@ -4,12 +4,6 @@ import { CustomHeading, CustomSpan,ColorSpan } from './../Headings/Headings';
 
 import { MdQueryBuilder } from "react-icons/md";
 
-import menu_1 from './../../img/food1.png';
-import menu_2 from './../../img/food2.png';
-import menu_3 from './../../img/food3.png';
-import menu_4 from './../../img/food4.png';
-import menu_5 from './../../img/food5.png';
-import menu_6 from './../../img/food6.png';
 
 const Menue = (props) => {
     return (
