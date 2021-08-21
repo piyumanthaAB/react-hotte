@@ -21,6 +21,11 @@ import menue_4 from './../img/food4.png'
 import menue_5 from './../img/food5.png'
 import menue_6 from './../img/food6.png'
 
+import cust_1 from './../img/customer1.png';
+import cust_2 from './../img/customer2.png';
+import cust_3 from './../img/customer3.png';
+import cust_4 from './../img/customer4.png';
+
 const Home = () => {
 
     const seconadryHeadingData = [
@@ -91,6 +96,29 @@ const Home = () => {
         }
     ]
 
+    const carouselSlideData = [
+        {
+            img: cust_1,
+            desc: "If you are going to use a passage of cren you need to isn't anything embarrassing hidden in the middle of text generators Internet tend repeat predefined chunks as necessary making this the first true generator on the Internet.",
+            name:"Krystian Hairston"
+        },
+        {
+            img: cust_2,
+            desc: "If you are going to use a passage of cren you need to isn't anything embarrassing hidden in the middle of text generators Internet tend repeat predefined chunks as necessary making this the first true generator on the Internet.",
+            name:"Antor Biswas"
+        },
+        {
+            img: cust_3,
+            desc: "If you are going to use a passage of cren you need to isn't anything embarrassing hidden in the middle of text generators Internet tend repeat predefined chunks as necessary making this the first true generator on the Internet.",
+            name:"Marie Hairston"
+        },
+        {
+            img: cust_4,
+            desc: "If you are going to use a passage of cren you need to isn't anything embarrassing hidden in the middle of text generators Internet tend repeat predefined chunks as necessary making this the first true generator on the Internet.",
+            name:"Hannah Hairston"
+        },
+    ]
+
     return (
         <>
             <HomeHeader />
@@ -100,7 +128,7 @@ const Home = () => {
             </HomeSecondaryHeadingConainer>
             <Menue data={todayMenue} />
             <TodayOffer />
-            <Carousel/>
+            <Carousel data={ carouselSlideData}/>
             <VideoAd />
             <ToTopBtn show={showBtn} />
         </>

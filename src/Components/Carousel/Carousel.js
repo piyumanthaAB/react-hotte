@@ -1,5 +1,5 @@
 import * as C from './CarouselElements';
-import { CustomHeading,CustomSpan } from './../Headings/Headings';
+import { CustomHeading,CustomSpan,ColorSpan } from './../Headings/Headings';
 
 import Slider from "react-slick";
 
@@ -12,7 +12,7 @@ import img_2 from './../../img/customer2.png';
 import img_3 from './../../img/customer3.png';
 import img_4 from './../../img/customer4.png';
 
-const Carousel = () => {
+const Carousel = (props) => {
 
     const NextArrow = ({ onClick }) => {
       
@@ -49,14 +49,13 @@ const Carousel = () => {
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        autoplay:true
     };
     
     return (
         <>
             <C.CarouselContainer>
-                <CustomHeading margin={"0 0 3rem"} color={"#0a0626"} size={"3.8rem"} weight={"700"} >
-                    Some of Our Satisfied
-                    <CustomSpan color={"#fd6f2a"} size={"3.8rem"} weight={"700"}> Customers.</CustomSpan>
+                    <C.CarouselOuterTitle>Some of Our Satisfied <ColorSpan> Customers.</ColorSpan> </C.CarouselOuterTitle>
 
                     <C.CarouselRow>
                         
@@ -68,53 +67,22 @@ const Carousel = () => {
                         <C.CarouselWrapper>
                             <Slider {...settings}>
                                 
-                                <C.CarouselSlide>
-                                    <C.CarouselCardImg src={img_1} />
-                                    <CustomHeading margin={"0 0 1rem"} size={"1.4rem"} color={"#807670"} >
-                                        If you are going to use a passage of cren you need to isn't anything embarrassing hidden in the middle of text
-                                        generators Internet tend repeat predefined chunks as necessary making this the first true
-                                        generator on the Internet.
-                                    </CustomHeading>
-                                    <CustomHeading weight={"700"} size={"2rem"} color={"#0a062"}>Kristyn Hairston</CustomHeading>
-                                    <CustomHeading size={"1.4rem"} color={"#807670"} >Happy Customer</CustomHeading>
-                                </C.CarouselSlide>
-                                
-                                <C.CarouselSlide>
-                                    <C.CarouselCardImg src={img_2} />
-                                    <CustomHeading margin={"0 0 1rem"} size={"1.4rem"} color={"#807670"} >
-                                        If you are going to use a passage of cren you need to isn't anything embarrassing hidden in the middle of text
-                                        generators Internet tend repeat predefined chunks as necessary making this the first true
-                                        generator on the Internet.
-                                    </CustomHeading>
-                                    <CustomHeading weight={"700"} size={"2rem"} color={"#0a062"}>Antor Biswas</CustomHeading>
-                                    <CustomHeading size={"1.4rem"} color={"#807670"} >Happy Customer</CustomHeading>
-                                </C.CarouselSlide>
-                                
-                                <C.CarouselSlide>
-                                    <C.CarouselCardImg src={img_3} />
-                                    <CustomHeading margin={"0 0 1rem"} size={"1.4rem"} color={"#807670"} >
-                                        If you are going to use a passage of cren you need to isn't anything embarrassing hidden in the middle of text
-                                        generators Internet tend repeat predefined chunks as necessary making this the first true
-                                        generator on the Internet.
-                                    </CustomHeading>
-                                    <CustomHeading weight={"700"} size={"2rem"} color={"#0a062"}>Marie Hairston</CustomHeading>
-                                    <CustomHeading size={"1.4rem"} color={"#807670"} >Happy Customer</CustomHeading>
-                                </C.CarouselSlide>
-                                
-                                <C.CarouselSlide>
-                                    <C.CarouselCardImg src={img_4} />
-                                    <CustomHeading margin={"0 0 1rem"} size={"1.4rem"} color={"#807670"} >
-                                        If you are going to use a passage of cren you need to isn't anything embarrassing hidden in the middle of text
-                                        generators Internet tend repeat predefined chunks as necessary making this the first true
-                                        generator on the Internet.
-                                    </CustomHeading>
-                                    <CustomHeading weight={"700"} size={"2rem"} color={"#0a062"}>Hannah Hairston</CustomHeading>
-                                    <CustomHeading size={"1.4rem"} color={"#807670"} >Happy Customer</CustomHeading>
-                                </C.CarouselSlide>
-                                
-                                
-                                
-                                
+                                {props.data.map((el, idx) => {
+                                    return (
+                                        <C.CarouselSlide key={idx}>
+                                            <C.CarouselCardImg src={el.img} />
+                                            <C.CarouselInnerText>
+                                                {el.desc}
+                                            </C.CarouselInnerText>
+                                    
+                                            <C.CarouselInnerTitle>{ el.name}</C.CarouselInnerTitle>
+                                            <C.CarouselInnerText>
+                                                Happy Customer
+                                            </C.CarouselInnerText>
+                                        </C.CarouselSlide>
+                                    );
+                                })}
+                            
                             </Slider>
                         </C.CarouselWrapper>
                         
@@ -125,7 +93,7 @@ const Carousel = () => {
                     
                     </C.CarouselRow>
                     
-                </CustomHeading>
+                
             </C.CarouselContainer>
         </>
     );
