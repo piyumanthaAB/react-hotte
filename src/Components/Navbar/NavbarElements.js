@@ -30,7 +30,8 @@ export const NavbarContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: .5rem 20rem;
-    background-color: #222222ba;
+    /* background-color: #222222ba; */
+    background-color: ${props=>props.color || "#222222aa"};
     font-family: "Poppins", sans-serif;
     flex-wrap: wrap;
 

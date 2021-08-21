@@ -1,5 +1,5 @@
 import * as nav from './NavbarElements';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 import LogoSrc from '../../img/logo.png';
 import { MdQueryBuilder } from "react-icons/md";
@@ -20,10 +20,24 @@ const Navbar = () => {
         }
     }, 10);
 
+    useEffect(() => {
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                setNavbarColor("#222");
+            } else {
+                setNavbarColor(false);
+            }
+        })
+    }, []);
+
+    const [navbarColor, setNavbarColor] = useState(false);
+
+
 
     return (
         
-            <nav.NavbarContainer>
+            <nav.NavbarContainer color={navbarColor}>
                 
                 <nav.NavbarBrad>
                 <nav.NavbarBrandImage src={ LogoSrc}/>

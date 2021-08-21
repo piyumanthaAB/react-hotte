@@ -10,7 +10,7 @@ const HeaderSecondary = (props) => {
     }
     return (
         <>
-            <S.SecondaryContainer borderRadius={props.borderRadius} padding={props.padding} >
+            <S.SecondaryHomeContainer  >
                 
                 
 
@@ -23,9 +23,11 @@ const HeaderSecondary = (props) => {
                                 {renderIcon(el.icon)}
                             </S.SecondaryIcon>
                             <S.SecondaryDetails>
-                                <CustomHeading size={"2.5rem"} weight={"bold"} color={"white"} space={""} > {el.mainTitle} </CustomHeading>
-                                <CustomHeading size={"1.4rem"} weight={"normal"} color={"white"} space={""} > {el.secondTitle} </CustomHeading>
-                                {el.thirdTitle && <CustomHeading size={"1.4rem"} weight={"normal"} color={"white"} space={""} > {el.thirdTitle} </CustomHeading>}
+                                
+                                <S.SecondaryDetailsTitle> {el.mainTitle} </S.SecondaryDetailsTitle>
+                                {/* <CustomHeading size={"1.4rem"} weight={"normal"} color={"white"} space={""} > {el.secondTitle} </CustomHeading> */}
+                                <S.SecondaryDetailsDesc>{el.secondTitle}</S.SecondaryDetailsDesc>
+                                {el.thirdTitle &&<S.SecondaryDetailsDesc>{el.thirdTitle}</S.SecondaryDetailsDesc> }
                             </S.SecondaryDetails>
 
                         </S.SecondaryInfoElement>
@@ -34,7 +36,7 @@ const HeaderSecondary = (props) => {
                 
                 
 
-            </S.SecondaryContainer>
+            </S.SecondaryHomeContainer>
 
         </>
      );

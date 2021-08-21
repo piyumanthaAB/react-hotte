@@ -18,3 +18,6 @@ export const CustomSpan = styled.span`
     letter-spacing: ${props => props.space || "initial"};
     border-bottom: ${props => props.bottomBorder || "initial"};
 `
+export const ColorSpan = styled.span`
+    color:#ff702a;
+`

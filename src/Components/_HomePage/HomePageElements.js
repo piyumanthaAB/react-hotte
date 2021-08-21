@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link as ScrollLink } from 'react-scroll';
 import cover from './../../img/hotte_homebg.jpg';
 import TodaysOfferCover from './../../img/offerbgimg.jpg';
 
@@ -14,6 +14,7 @@ export const HomeHeaderContainer = styled.div`
 
     display: flex;
     justify-content: space-between;
+
     padding: 5rem 20rem;
     z-index: 0;
 
@@ -29,16 +30,50 @@ export const HomeHeaderContainer = styled.div`
         z-index: 1;
     }
 
+    /* styled for screen size 1400px or less */
+    @media screen and (max-width:1400px){
+        padding: 5rem 15rem;
+    }
+   
+    /* styled for screen size 1200px or less */
+    @media screen and (max-width:1200px){
+        padding: 5rem 8rem;
+        /* max-height: 120vh; */
+
+    }
+    /* styled for screen size 1200px or less */
+    @media screen and (max-width:1000px){
+        min-height: unset;
+        /* max-height: 120vh; */
+
+    }
+    /* styled for screen size 500px or less */
+    @media screen and (max-width:500px){
+        padding: 5rem 5rem;
+
+    }
+    /* styled for screen size 400px or less */
+    @media screen and (max-width:400px){
+        padding: 5rem 3rem;
+
+    }
+
 `
 
 export const HomeHeaderLeft = styled.div`
     flex: 0 1 48%;
-    min-height: 50vh;
+    /* min-height: 50vh; */
     position: relative;
     z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    padding: 15rem 0 0;
+    @media screen and (max-width:760px){
+        flex: 0 1 100%;
+        padding: 12rem 0 0;
+
+    }
     
 `;
 
@@ -50,20 +85,132 @@ export const HomeHeaderRight = styled.div`
     z-index: 2;
     display: flex;
     justify-content: center;
+
     align-items: center;
+    @media screen and (max-width:760px){
+        flex: 0 1 0%;
+    }
 `;
 
 export const HomeHeaderRightImg = styled.img`
     width: 80%;
+
+    @media screen and (max-width:1200px){
+        width: 70%;
+    }
+
+    @media screen and (max-width:760px){
+        display: none;
+    }
     
 `;
 export const HomeHeaderBubbleImg = styled.img`
     width: 12%;
     position: absolute;
-    top: 74%;
-    left: 4%;
+    top: 63%;
+    left: 3%;
     z-index: 2;
+
+    @media screen and (max-width:1400px){
+        top: 73%;
+        left: 3%;
+
+
+    }
+
+    @media screen and (max-width:1000px){
+        display: none;
+
+    }
     
+`;
+export const HomeHeaderTitle = styled.p`
+    font-size: 8.7rem;
+    color: white;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 1rem 0;
+
+
+
+    @media screen and (max-width:1200px){
+        font-size: 6.7rem;
+
+    }
+    @media screen and (max-width:1000px){
+        font-size: 5.7rem;
+
+    }
+
+    @media screen and (max-width:760px){
+        font-size: 7.7rem;
+    }
+    @media screen and (max-width:600px){
+        font-size: 5.7rem;
+    }
+
+    @media screen and (max-width:400px){
+        font-size: 4.7rem;
+    }
+`
+export const HomeHeaderSubText = styled.p`
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: white;
+    padding: 2rem 0;
+
+    @media screen and (max-width:1200px){
+        font-size: 1.4rem;
+
+    }
+    @media screen and (max-width:1000px){
+        font-size: 1.2rem;
+
+    }
+
+    @media screen and (max-width:400px){
+        font-size: 1.1rem;
+    }
+`
+
+export const HomeHeaderColoredSpan = styled.span`
+    color: #ec5a12;
+`
+export const HomeHeaderUnderlinedSpan = styled.span`
+    font-weight: 300;
+    border-bottom: 2px solid #ec5a12;
+    
+`
+
+export const HomeHeaderLinkBtn = styled(ScrollLink)`
+    max-width: max-content;
+    padding: .8rem 2.2rem;
+    border-radius: 50rem;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-image: linear-gradient(to right,#fb6828, #cc0e15);
+    backface-visibility: hidden;
+
+    transition: all .2s;
+
+    &:hover{
+        background-image:linear-gradient(to right,transparent, transparent) ;
+        border: 2px solid #fb6828;
+        color: #fb6828;
+    }
+
+    @media screen and (max-width:1000px){
+        font-size: 1.2rem;
+    }
+    @media screen and (max-width:600px){
+        font-size: 1rem;
+    }
 `;
 
 //==================================== Header Elements End =================================
@@ -73,18 +220,63 @@ export const HomeHeaderBubbleImg = styled.img`
 export const TodaySpecialContainer = styled.div`
     min-height: 70vh;
     background-color: white;
+    /* background-color: yellow; */
     display: flex;
     padding: 5rem 20rem;
     justify-content: space-between;
+
+     /* styled for screen size 1400px or less */
+     @media screen and (max-width:1400px){
+        padding: 5rem 10rem;
+    }
+   
+    /* styled for screen size 1200px or less */
+    @media screen and (max-width:1200px){
+        padding: 5rem 7rem;
+        /* max-height: 120vh; */
+
+    }
+    @media screen and (max-width:900px){
+        padding: 5rem 5rem;
+        /* max-height: 120vh; */
+
+    }
+
+    @media screen and (max-width:760px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (max-width:500px){
+        padding: 5rem 2rem;
+
+
+    }
 `
 export const TodaySpecialLeft = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 0 1 48%;
+    @media screen and (max-width:1100px){
+        flex: 0 1 40%;
+
+    }
+    
 `;
 export const TodaySpecialLeftImg = styled.img`
     width: 55%;
+    @media screen and (max-width:1200px){
+        width: 70%;
+
+    }
+    @media screen and (max-width:1200px){
+        width: 40%;
+
+    }
+    
+
 `;
 
 export const TodaySpecialRight = styled.div`
@@ -94,6 +286,28 @@ export const TodaySpecialRight = styled.div`
     padding: 4rem ;
     text-align: center;
     /* display: flex; */
+    @media screen and (max-width:1200px){
+        padding: 2rem;
+        /* max-height: 120vh; */
+    }
+
+    @media screen and (max-width:1100px){
+        flex: 0 1 58%;
+
+    }
+    @media screen and (max-width:760px){
+        width: 70%;
+
+    }
+    @media screen and (max-width:600px){
+        width: 90%;
+
+    }
+
+    @media screen and (max-width:500px){
+        width: 100%;
+
+    }
 `;
 
 export const TodaySpecialRightImgContainer = styled.div`
@@ -107,12 +321,58 @@ export const TodaySpecialRightImgContainer = styled.div`
     border-radius: 1rem;
     transform: rotate(45deg);
     margin: 0 auto;
+
+    @media screen and (max-width:500px){
+        width: 18%;
+
+    }
 `
 
 export const TodaySpecialRightImg = styled.img`
     width: 100%;
     
 `;
+
+export const TodaySpecialTitle = styled.p`
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: #0a0626;
+    line-height: 1.2;
+    margin: 2rem 0;
+
+    @media screen and (max-width:1200px){
+       font-size: 3.9rem;
+    }
+    @media screen and (max-width:900px){
+       font-size: 3.3rem;
+    }
+    @media screen and (max-width:500px){
+       font-size: 2.8rem;
+    }
+
+    @media screen and (max-width:400px){
+       font-size: 2.5rem;
+    }
+
+
+`
+export const TodaySpecialDesc = styled.p`
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: #494442;
+    margin: 2rem 0;
+
+    @media screen and (max-width:1200px){
+       font-size: 1.3rem;
+    }
+    @media screen and (max-width:900px){
+       font-size: 1.1rem;
+    }
+    @media screen and (max-width:500px){
+       font-size: 1rem;
+    }
+
+`
 
 export const TodaySpecialOrderContainer = styled.div`
     width: 100%;
@@ -122,6 +382,18 @@ export const TodaySpecialOrderContainer = styled.div`
     border-radius: 1rem;
     min-height: 15vh;
     padding: 2rem 1rem;
+
+    @media screen and (max-width:1200px){
+        padding:  1rem 1rem 1.5rem;
+    }
+
+    @media screen and (max-width:400px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+    }
 `
 export const TodaySpecialPriceContainer = styled.div`
     flex: 0 1 30%;
@@ -133,6 +405,53 @@ export const TodaySpecialPriceContainer = styled.div`
     flex-direction: column;
     padding: 1rem 0;
 `
+export const TodaySpecialPrice = styled.p`
+    color: #ff702a;
+    font-weight: 700;
+    font-size: 3rem;
+    @media screen and (max-width:1200px){
+       font-size: 2rem;
+    }
+    @media screen and (max-width:500px){
+       font-size:1.5rem;
+    }
+
+    @media screen and (max-width:400px){
+       font-size: 2rem;
+    }
+    
+`
+
+export const TodaySpecialPrice_$ = styled.span`
+    color: #ff702a;
+    font-weight: 700;
+    font-size: 2.3rem;
+    @media screen and (max-width:1200px){
+       font-size: 1.7rem;
+    }
+    @media screen and (max-width:500px){
+       font-size: 1.3rem;
+    }
+
+    @media screen and (max-width:400px){
+       font-size: 1.5rem;
+    }
+    
+`
+
+export const TodaySpecialPriceSubText = styled.p`
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #494442;
+    @media screen and (max-width:1200px){
+       font-size: 1.1rem;
+    }
+    @media screen and (max-width:500px){
+       font-size: 1rem;
+    }
+    
+`
+
 export const TodaySpecialQtyContainer=styled.div`
     width: 7rem;
     height: 7rem;
@@ -144,6 +463,17 @@ export const TodaySpecialQtyContainer=styled.div`
     align-items: center;
     margin-top: 1rem;
     transform: rotate(45deg);
+
+    @media screen and (max-width:500px){
+        width: 5rem;
+        height: 5rem;
+    }
+
+    @media screen and (max-width:400px){
+        margin-bottom: 2rem;
+        width: 6rem;
+        height: 6rem;
+    }
     
     
 `
@@ -178,7 +508,12 @@ export const QtyAddRemove = styled.button`
     &:hover{
         color: #ff702a;
     }
-    
+    @media screen and (max-width:500px){
+       font-size: 1.5rem;
+    }
+    @media screen and (max-width:400px){
+       font-size: 2rem;
+    }
 `
 
 export const TodaySpecialOrderBtnContainer = styled.div`
@@ -189,6 +524,11 @@ export const TodaySpecialOrderBtnContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width:1200px){
+        flex: 0 1 35%;
+
+    }
 
 `;
 
@@ -211,6 +551,16 @@ export const OrderBtn = styled.button`
         color: #ff702a;
         background-color: white;
     }
+
+    @media screen and (max-width:900px){
+       font-size: 1.3rem;
+    }
+    @media screen and (max-width:500px){
+       font-size: 1rem;
+    }
+    @media screen and (max-width:400px){
+       font-size: 1.1rem;
+    }
 `
 
 
@@ -221,6 +571,35 @@ export const OrderBtn = styled.button`
 
 export const HomeSecondaryHeadingConainer = styled.div`
     padding: 2rem 20rem;
+    /* background-color: red; */
+
+    @media screen and (max-width:1400px){
+        padding: 5rem 10rem;
+    }
+
+     /* styled for screen size 1200px or less */
+     @media screen and (max-width:1200px){
+        padding: 5rem 7rem;
+        /* max-height: 120vh; */
+
+    }
+    @media screen and (max-width:900px){
+        padding: 1rem 5rem;
+        
+
+    }
+    @media screen and (max-width:760px){
+        padding: 1rem 5rem;
+        
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+
+    }
+    @media screen and (max-width:500px){
+        padding: 1rem 2rem;
+
+    }
 `
 
 //==================================== Secondary Heading Elements End =================================
@@ -233,6 +612,28 @@ export const MenueContainer = styled.div`
     /* min-height: 50vh; */
     /* max-height: 50%; */
     padding: 2rem 20rem;
+
+    @media screen and (max-width:1400px){
+        padding: 5rem 10rem;
+    }
+    @media screen and (max-width:900px){
+        padding: 1rem 5rem;
+        
+
+    }
+    @media screen and (max-width:760px){
+        padding: 1rem 5rem;
+        
+        /* display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; */
+
+    }
+    @media screen and (max-width:500px){
+        padding: 1rem 2rem;
+
+    }
 `;
 
 export const MenueTitleContainer = styled.div`
@@ -240,7 +641,48 @@ export const MenueTitleContainer = styled.div`
     text-align: center;
     min-height: 20vh;
     margin: 0 auto;
+
+    @media screen and (max-width:1000px){
+       width: 50%;
+    }
+    @media screen and (max-width:760px){
+       width: 60%;
+    }
+    @media screen and (max-width:600px){
+       width: 70%;
+    }
+    @media screen and (max-width:600px){
+       width: 80%;
+    }
+    
 `;
+
+export const MenueTitle = styled.p`
+    font-size: 3.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #0a0626;
+    @media screen and (max-width:600px){
+        font-size: 3.3rem;
+    }
+    @media screen and (max-width:400px){
+        font-size: 2.8rem;
+    }
+`
+
+export const MenueTitleDesc = styled.p`
+    font-size: 1.4rem;
+    color: #494442;
+    margin: 2rem 0;
+
+    @media screen and (max-width:600px){
+        font-size: 1.2rem;
+    }
+    @media screen and (max-width:400px){
+        font-size: 1.1rem;
+    }
+
+`
 
 export const MenueCardsContainer = styled.div`
     flex: 1;
@@ -250,6 +692,20 @@ export const MenueCardsContainer = styled.div`
     /* background-color: red; */
     padding: 5rem 2rem;
 
+    @media screen and (max-width:760px){
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    @media screen and (max-width:500px){
+        padding: 5rem 0rem;
+    }
+    @media screen and (max-width:400px){
+        /* width: 100%; */
+    }
 `;
 
 
@@ -264,7 +720,21 @@ export const MenueCard = styled.div`
     flex-direction: column;
     /* min-height: 50vh; */
 
-
+    @media screen and (max-width:1200px){
+        flex: 0 1 48%;
+    }
+    @media screen and (max-width:760px){
+        width: 70%;
+    }
+    @media screen and (max-width:600px){
+        width: 85%;
+    }
+    @media screen and (max-width:500px){
+        width: 95%;
+    }
+    @media screen and (max-width:400px){
+        width: 100%;
+    }
     
 `;
 
@@ -281,7 +751,23 @@ export const MenueIngrediantsContainer = styled.div`
     ${MenueCard}:hover & {
         opacity: .85;
     }
+
+    @media screen and (max-width:760px){
+        opacity: .75;
+    }
 `
+export const MenueIngrediantsTitle = styled.p`
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: white;
+`
+export const MenueIngrediantsItems = styled.p`
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: white;
+    margin: .3rem 0;
+`
+
 
 
 export const MenueImageContainer = styled.div`
@@ -300,6 +786,7 @@ export const MenueImageContainer = styled.div`
 
 export const MenueImage = styled.img`
     width: 50%;
+    /* opacity: 0; */
 `;
 
 
@@ -311,6 +798,7 @@ export const MenueOrderContainer = styled.div`
     background-color: white;
     /* display: flex; */
     padding: 2rem;
+    margin: 2rem 0 0;
 `;
 
 export const MenueOrderBtnRow = styled.div`
@@ -318,6 +806,58 @@ export const MenueOrderBtnRow = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+`
+export const MenueOrderRowTitle = styled.p`
+    color: #0a0626;
+    font-size: 2.4rem;
+    font-weight: 700;
+`
+
+export const MenueOrderPrice = styled.p`
+    color: #ff702a;
+    font-weight: 700;
+    font-size: 3rem;
+    @media screen and (max-width:1200px){
+       font-size: 2.5rem;
+    }
+    @media screen and (max-width:500px){
+       font-size:2rem;
+    }
+
+    @media screen and (max-width:400px){
+       font-size: 2.2rem;
+    }
+    
+`
+
+export const MenueOrderPrice_$ = styled.span`
+    color: #ff702a;
+    font-weight: 700;
+    font-size: 2.3rem;
+    @media screen and (max-width:1200px){
+       font-size: 1.7rem;
+    }
+    @media screen and (max-width:500px){
+       font-size: 1.3rem;
+    }
+
+    @media screen and (max-width:400px){
+       font-size: 1.5rem;
+    }
+    
+`
+
+export const MenueOrderPriceSubText = styled.p`
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #494442;
+    @media screen and (max-width:1200px){
+       font-size: 1.1rem;
+    }
+    @media screen and (max-width:500px){
+       font-size: 1rem;
+    }
+    
 `
 
 export const MenueOrderBtnRowLeft = styled.div`
@@ -340,6 +880,10 @@ export const MenueOrderBtn = styled.button`
     &:hover{
         color: white;
         background-color: #fc802a;
+    }
+
+    @media screen and (max-width:400px){
+       font-size: 1.2rem;
     }
 `
 

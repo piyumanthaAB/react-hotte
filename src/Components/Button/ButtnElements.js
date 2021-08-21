@@ -36,8 +36,8 @@ export const ButtonContainerA = styled(ScrollLink)`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: white;
-    font-size:${props=>props.size || "1.2rem"};
+    color: red;
+    font-size:"3.4rem";
     text-decoration: none;
     background-image: linear-gradient(to right,#fb6828, #cc0e15);
     backface-visibility: hidden;
@@ -49,6 +49,8 @@ export const ButtonContainerA = styled(ScrollLink)`
         border: 2px solid #fb6828;
         color: #fb6828;
     }
+
+    
 `
 
 export const BacktoTop = styled.h1`
