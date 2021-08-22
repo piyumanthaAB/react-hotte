@@ -1,4 +1,4 @@
-import { CustomHeading,CustomSpan,ColorSpan } from '../Headings/Headings';
+import { ColorSpan } from '../Headings/Headings';
 import * as H from './HeaderElements';
 import SideImg from './../../img/bubble.png';
 

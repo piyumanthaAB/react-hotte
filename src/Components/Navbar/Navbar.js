@@ -8,7 +8,7 @@ import { BiMenu } from "react-icons/bi";
 
 const Navbar = () => {
 
-    const [expandNav, setExpandNav] = useState(false);
+    const [expandNav, setExpandNav] = useState("");
     const [openNow, setOpenNow] = useState('.....');
 
     setInterval(() => {
@@ -16,7 +16,12 @@ const Navbar = () => {
         if (d.getHours() >= 22 || d.getHours() < 8) {
             setOpenNow('Closed');
         } else {
-            setOpenNow('Open')
+            if (d.getDay() !== 0) {
+                setOpenNow('Open')
+            } else {
+                setOpenNow('Closed');
+                
+            }
         }
     }, 10);
 
@@ -26,12 +31,12 @@ const Navbar = () => {
             if (window.pageYOffset > 300) {
                 setNavbarColor("#222");
             } else {
-                setNavbarColor(false);
+                setNavbarColor("");
             }
         })
     }, []);
 
-    const [navbarColor, setNavbarColor] = useState(false);
+    const [navbarColor, setNavbarColor] = useState("");
 
     const HandleNavExpand = () => {
         setExpandNav(!expandNav);
@@ -52,8 +57,8 @@ const Navbar = () => {
             <nav.NavbarBrad>
                 <nav.NavbarBrandImage src={LogoSrc} />
                 <nav.NavbarBrandTextContainer>
-                    <nav.NavbrandText color={'#c5331f'}><MdQueryBuilder /> {openNow} Now</nav.NavbrandText>
-                    <nav.NavbrandText color={'#a0cc3a'}>8AM - 10PM</nav.NavbrandText>
+                    <nav.NavbrandText color={"#c5331f"}><MdQueryBuilder /> {openNow} Now</nav.NavbrandText>
+                    <nav.NavbrandText color={"#a0cc3a"}>8AM - 10PM</nav.NavbrandText>
                 </nav.NavbarBrandTextContainer>
             </nav.NavbarBrad>
 

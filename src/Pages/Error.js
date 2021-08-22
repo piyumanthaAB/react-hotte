@@ -2,7 +2,7 @@ import Header from "../Components/Header/Header";
 import Button from "../Components/Button/Button";
 import VideoAd from "../Components/VideoAd/VideoAd";
 import * as E from './../Components/_Error Page/ErrorPageElements';
-import { CustomHeading, CustomSpan,ColorSpan } from "../Components/Headings/Headings";
+import { ColorSpan } from "../Components/Headings/Headings";
 import ErrorImage from './../img/404_Error.png'
 
 import ToTopBtn from "../Components/Button/ToTopBtn";

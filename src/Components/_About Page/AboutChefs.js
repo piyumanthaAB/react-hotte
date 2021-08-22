@@ -2,7 +2,6 @@ import { CustomHeading,CustomSpan } from '../Headings/Headings';
 import * as A from './AboutPageElements';
 import { FooterIcon,FooterIconsContainer} from './../Footer/FooterElements';
 
-import chef_1 from './../../img/chefs1.png';
 
 import { FaFacebookF,FaPinterestP,FaDribbble,FaTwitter } from "react-icons/fa";
 

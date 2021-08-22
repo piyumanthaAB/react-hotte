@@ -1,5 +1,5 @@
 import * as T from './HomePageElements';
-import { CustomHeading ,CustomSpan,ColorSpan} from './../Headings/Headings';
+import { ColorSpan} from './../Headings/Headings';
 import specialImg from './../../img/Todayspecialimg.png';
 import donut from './../../img/donut.png';
 

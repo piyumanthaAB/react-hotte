@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import AdImage from './../../img/testyimg.jpg'
 
 
 export const ErrorMessage = styled.div`

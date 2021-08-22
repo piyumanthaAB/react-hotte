@@ -1,6 +1,6 @@
 import * as C from './ContactPageElements';
 import { FormInput, FormTextArea, FormLabel,FormSubmitBtn,FormDropdown,FormDropdownOption } from './../Forms/FormElements';
-import { CustomHeading,CustomSpan,ColorSpan } from '../Headings/Headings';
+import { CustomHeading,ColorSpan } from '../Headings/Headings';
 
 const ContactForm = () => {
     return (

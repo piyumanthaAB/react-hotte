@@ -1,9 +1,8 @@
 import * as C from './CarouselElements';
-import { CustomHeading,CustomSpan,ColorSpan } from './../Headings/Headings';
+import {ColorSpan } from './../Headings/Headings';
 
 import Slider from "react-slick";
 
-import { GrFormNextLink, GrFormPreviousLink } from "react-icons/gr";
 
 import { BsArrowRightShort,BsArrowLeftShort } from "react-icons/bs";
 

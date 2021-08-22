@@ -1,5 +1,5 @@
 import * as V from './VideoAdElements';
-import { CustomHeading, CustomSpan,ColorSpan } from "./../Headings/Headings";
+import { ColorSpan } from "./../Headings/Headings";
 import { BsFillPlayFill } from "react-icons/bs";
 const VideoAd = () => {
     return (

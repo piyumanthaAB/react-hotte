@@ -1,5 +1,4 @@
 import * as S from './HeaderSecondaryElements';
-import {CustomHeading,CustomSpan} from './../Headings/Headings';
 
 
 

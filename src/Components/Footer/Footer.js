@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 
 import * as F from './FooterElements';
 import { CustomHeading,ColorSpan } from '../Headings/Headings';
