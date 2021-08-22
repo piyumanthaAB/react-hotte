@@ -6,15 +6,28 @@ const useShowBtn = () => {
 
     useEffect(() => {
         
-        window.addEventListener('scroll', () => {
+        // window.addEventListener('scroll', () => {
+        //     if (window.pageYOffset > 600) {
+        //         setShowBtn(true);
+        //     } else {
+        //         setShowBtn(false);
+        //     }
+        // });
+
+        const handleScroll = () => {
             if (window.pageYOffset > 600) {
                 setShowBtn(true);
             } else {
                 setShowBtn(false);
             }
-        });
+        }
 
-    
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            // console.log('cleanup');
+        }
         
     }, []);// eslint-disable-line react-hooks/exhaustive-deps
 

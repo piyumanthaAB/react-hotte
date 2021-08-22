@@ -10,6 +10,7 @@ const ScrollToTop = ({children}) => {
     useEffect(() => {
 
         
+
         scroll.scrollToTop({
             duration: 100,
             delay: 0,

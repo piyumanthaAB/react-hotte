@@ -26,14 +26,29 @@ const Navbar = () => {
     }, 10);
 
     useEffect(() => {
-        
-        window.addEventListener('scroll', () => {
+
+        const handleScroll = () => {
             if (window.pageYOffset > 300) {
                 setNavbarColor("#222");
             } else {
                 setNavbarColor("");
             }
-        })
+        }
+        
+        // window.addEventListener('scroll', () => {
+        //     if (window.pageYOffset > 300) {
+        //         setNavbarColor("#222");
+        //     } else {
+        //         setNavbarColor("");
+        //     }
+        // })
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+
     }, []);
 
     const [navbarColor, setNavbarColor] = useState("");
