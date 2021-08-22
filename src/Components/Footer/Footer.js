@@ -1,7 +1,7 @@
 import { useState,useEffect } from 'react';
 
 import * as F from './FooterElements';
-import { CustomHeading } from '../Headings/Headings';
+import { CustomHeading,ColorSpan } from '../Headings/Headings';
 
 import LogoSrc from '../../img/logo.png';
 import Underline from '../../img/border.png';
@@ -141,9 +141,7 @@ const Footer = () => {
                         <F.FooterOpenHrsRow select={(day === 'sunday') ? true:false}>
                             <F.FooterP>Sunday</F.FooterP>
                             <F.FooterP>---------------</F.FooterP>
-                            <CustomHeading color={"#ff1800"} size={"1.4rem"} weight={"500"} space={null} >
-                            Closing Day
-                            </CustomHeading>
+                            <F.FooterP> <ColorSpan color={"red"}>Closing Day</ColorSpan>  </F.FooterP> 
                         </F.FooterOpenHrsRow>
                         
                         <F.FooterOpenHrsRow select={(day === 'monday') ? true:false}>

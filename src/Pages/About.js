@@ -144,7 +144,7 @@ const About = () => {
     return (
         <>
             <Header mainTitle={"About"} secondaryTitle={"About"} />
-            <HeaderSecondary data={seconadryHeadingData} />
+            <HeaderSecondary  data={seconadryHeadingData} />
             <AboutStory Title={Title} P1={P1} P2={P2} handleMission={handleMission} handleStory={ handleStory} handleVision={handleVision} />
             <AboutChefs data={chefsData} />
             <VideoAd />

@@ -1,19 +1,18 @@
 import * as C from './ContactPageElements';
 import { FormInput, FormTextArea, FormLabel,FormSubmitBtn,FormDropdown,FormDropdownOption } from './../Forms/FormElements';
-import { CustomHeading,CustomSpan } from '../Headings/Headings';
+import { CustomHeading,CustomSpan,ColorSpan } from '../Headings/Headings';
 
 const ContactForm = () => {
     return (
         <>
             <C.ContactFormContainer>
                 <C.ContactFormHeader>
-                    <CustomHeading weight={"700"} color={"#0a0626"} size={"3.4rem"} lineHeight={"1.2"} >
-                        Make a Reservation And Enjoy
-                        <CustomSpan weight={"700"} color={"#ff702a"} size={"3.4rem"} > Fresh Food </CustomSpan>
-                    </CustomHeading>
-                    <CustomHeading margin={"2.5rem 0"} weight={"400"} color={"#494442"} size={"1.4rem"} lineHeight={"1.2"}>
-                    There are many variations of passages of Lorem Ipsum available but majority have suffered alteration injected humour
-                    </CustomHeading>
+                    <C.ContactFormTitle>
+                        Make a Reservation And Enjoy  <ColorSpan> Fresh Food</ColorSpan>
+                    </C.ContactFormTitle>
+                    <C.ContactFormTitleDesc>
+                        There are many variations of passages of Lorem Ipsum available but majority have suffered alteration injected humour
+                    </C.ContactFormTitleDesc>
                 </C.ContactFormHeader>
                 <C.ContactForm>
                     <C.ContactFormTop>

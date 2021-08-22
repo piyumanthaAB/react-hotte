@@ -5,6 +5,7 @@ const useShowBtn = () => {
     const [showBtn, setShowBtn] = useState(false);
 
     useEffect(() => {
+        
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 600) {
                 setShowBtn(true);
@@ -12,6 +13,9 @@ const useShowBtn = () => {
                 setShowBtn(false);
             }
         });
+
+    
+        
     }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
     return showBtn;

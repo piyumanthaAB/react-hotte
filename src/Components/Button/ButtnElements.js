@@ -74,4 +74,17 @@ export const BacktoTop = styled.h1`
         cursor: pointer;
         color: black;
     }
+    @media screen and (max-width:760px){
+        width: 4rem;
+        height: 4rem;
+        font-size: 2rem;
+
+    }
+
+    @media screen and (max-width:400px){
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+
+    }
 `

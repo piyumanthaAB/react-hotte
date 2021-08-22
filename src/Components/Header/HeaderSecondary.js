@@ -10,7 +10,7 @@ const HeaderSecondary = (props) => {
     }
     return (
         <>
-            <S.SecondaryHomeContainer  >
+            <S.SecondaryHomeContainer border_r={props.radius} >
                 
                 
 
@@ -32,7 +32,7 @@ const HeaderSecondary = (props) => {
 
                         </S.SecondaryInfoElement>
                     );
-                })};
+                })}
                 
                 
 

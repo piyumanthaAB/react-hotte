@@ -8,8 +8,9 @@ export const SecondaryContainer = styled.div`
     flex:1 ;
     padding: 2rem 20rem;
     /* padding: ${props=> props.padding || "2rem 20rem"}; */
-    border-radius: ${props=> props.borderRadius || "initial"};
-    background-color: #ff702a;
+    /* border-radius: 0; */
+    
+    background-color: red;
 
     
     position: relative;
@@ -41,7 +42,8 @@ export const SecondaryHomeContainer = styled.div`
     min-height: 25vh;
     flex: 0 1 100% ;
     padding: 2rem 10rem;
-    border-radius: 1rem;
+    border-radius: ${props=>props.border_r || "initial"};
+    /* border-radius: 1rem; */
     background-color: #ff702a;
 
     
@@ -70,8 +72,8 @@ export const SecondaryHomeContainer = styled.div`
     }
     @media screen and (max-width:760px){
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding: 2rem 2rem;
         flex: 0 1 70% ; 
     }

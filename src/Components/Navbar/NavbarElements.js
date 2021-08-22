@@ -3,19 +3,8 @@ import styled, { keyframes } from "styled-components";
 import { motion } from 'framer-motion';
 // import LogoSrc from '../../img/logo.png';
 
-// Animations
 
-const fadeDown = keyframes`
-    0%{
-        display: flex;
-        opacity:0;
-        transform: translateY(-20rem);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
-`
+
 
 
 
@@ -35,10 +24,20 @@ export const NavbarContainer = styled.div`
     font-family: "Poppins", sans-serif;
     flex-wrap: wrap;
 
-    @media screen and (max-width:1250px){
+
+    @media screen and (max-width:1400px){
         padding: 1rem 10rem;
         /* background-color: red; */
     } 
+    @media screen and (max-width:1200px){
+        padding: 1rem 7rem;
+        /* background-color: red; */
+    } 
+    @media screen and (max-width:500px){
+        padding: 1rem 1rem;
+        /* background-color: red; */
+    } 
+    
      
 `
 
@@ -50,6 +49,12 @@ export const NavbarBrad = styled.div`
     height: 7rem;
     /* background-color: red; */
     display: flex;
+
+    @media screen and (max-width:500px){
+        width:20rem;
+        height: 5rem;
+
+    } 
 
     
 `
@@ -75,6 +80,10 @@ export const NavbrandText = styled.p`
     align-items: center;
     font-size: 1.5rem;
 
+    @media screen and (max-width:500px){
+        font-size: 1.2rem;
+    } 
+
     &:not(:last-child){
         margin-bottom: .7rem;
     }
@@ -82,27 +91,24 @@ export const NavbrandText = styled.p`
 
 
 export const NavLinks = styled(motion.div)`
-    flex: 0 1 45%;
+    flex: 0 0 50%;
     background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ec5a12;
+    background-color: #ff702a;
     border-radius: 5rem;
     padding: .7rem 0rem .7rem 3rem;
 
     /* transform: translateY(-20rem); */
 
-    
+    @media screen and (max-width:1200px){
+        flex: 0 0 55%;
+
+    } 
 
     @media screen and (max-width:1000px){
-        transform: translateY(0);
-        margin: 1rem 0 2rem;
-        order: 1;
-        border-radius: 1rem;
-        flex: 70%;
-        flex-direction: column;
-        padding: 1rem 0;
+        display: none;
         
     }
 `
@@ -118,6 +124,19 @@ export const NavLink = styled(Link)`
     position: relative;
 
     transition: color .3s;
+
+    @media screen and (max-width:1200px){
+        font-size: 1.3rem;
+
+    } 
+    @media screen and (max-width:1000px){
+        font-size: 1.5rem;
+
+    } 
+    @media screen and (max-width:600px){
+        font-size: 1.3rem;
+
+    } 
     
     &::before{
         content: "";
@@ -187,13 +206,41 @@ export const NavbarExpand = styled.div`
     @media screen and (min-width:1000px){
         display: none;
     }
+
+    @media screen and (max-width:500px){
+        width: 4rem;
+        height: 3rem;
+
+    }
 `
 
 export const NavbarExpandIcon = styled.span`
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 3rem;
     color: #ff702a;
+
+    @media screen and (max-width:500px){
+        font-size: 2rem;
+
+    }
 `
 
+// Dropdown Menue For screen width < 1000px devices
+
+export const NavbarDropdownContainer = styled(motion.div)`
+    width: 100vw;
+    min-height: 40vh;
+    background-color: #ff702a;
+    z-index: 10;
+    border-radius: 1rem;
+    margin: 2rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+
+   
+`

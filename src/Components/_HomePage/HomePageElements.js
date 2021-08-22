@@ -18,6 +18,10 @@ export const HomeHeaderContainer = styled.div`
     padding: 5rem 20rem;
     z-index: 0;
 
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+
 
     &::before{
         position: absolute;

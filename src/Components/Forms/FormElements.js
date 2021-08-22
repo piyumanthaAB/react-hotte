@@ -20,11 +20,21 @@ export const FormInput = styled.input`
         outline:none ;
         border: 1px solid #fc802a;
     }
+
+    @media screen and (max-width:760px){
+        font-size: 1.2rem;
+
+    }
     
 `
 export const FormLabel = styled.label`
     color: #494442;
     font-size: 1.4rem;
+
+    @media screen and (max-width:760px){
+        font-size: 1.2rem;
+
+    }
 `
 
 export const FormTextArea = styled.textarea`
@@ -58,7 +68,11 @@ export const FormSubmitBtn = styled.button`
     z-index: 1;
 
     
+    @media screen and (max-width:500px){
+       font-size: 1.1rem;
 
+
+    }
 
     
     &:hover{
@@ -76,6 +90,11 @@ export const FormDropdown = styled.select`
     border-radius: .3rem;
     font-family: "Poppins", sans-serif;
     color: #696969;
+
+    @media screen and (max-width:760px){
+        font-size: 1.2rem;
+
+    }
 
 `;
 

@@ -124,7 +124,7 @@ const Home = () => {
             <HomeHeader />
             <TodaySpecial />
             <HomeSecondaryHeadingConainer>
-                <HeaderSecondary  data={seconadryHeadingData} />
+                <HeaderSecondary radius={"1rem"} data={seconadryHeadingData} />
             </HomeSecondaryHeadingConainer>
             <Menue data={todayMenue} />
             <TodayOffer />

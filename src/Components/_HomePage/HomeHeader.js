@@ -1,8 +1,6 @@
 import * as H from './HomePageElements';
-import { CustomHeading,CustomSpan } from '../Headings/Headings';
 import rightImg from './../../img/burger1.png';
 import bubble from './../../img/bubble.png'
-import ButtonA from '../Button/ButtonA';
 
 
 const HomeHeader = () => {

@@ -9,6 +9,14 @@ export const FooterContainer = styled.div`
     display: flex;
     flex-direction: column;
     font-family: "Poppins", sans-serif;
+
+    @media screen and (max-width:900px){
+        flex-wrap: wrap;
+
+    }
+
+    
+
 `;
 
 export const FooterMain = styled.div`
@@ -18,6 +26,37 @@ export const FooterMain = styled.div`
     justify-content: space-between;
 
 
+  /* styled for screen size 1400px or less */
+     @media screen and (max-width:1400px){
+        padding: 5rem 10rem;
+    }
+   
+    /* styled for screen size 1200px or less */
+    @media screen and (max-width:1200px){
+        padding: 5rem 7rem;
+
+    }
+    @media screen and (max-width:1000px){
+        padding: 5rem 1.5rem;
+
+    }
+
+    @media screen and (max-width:900px){
+        flex-wrap: wrap;
+        padding: 5rem 6rem;
+
+    }
+    @media screen and (max-width:600px){
+        padding: 5rem 2rem;
+
+    }
+    @media screen and (max-width:400px){
+        padding: 5rem .5rem;
+
+    }
+    
+
+    
     
 `
 
@@ -27,6 +66,15 @@ export const FooterSocialMedia = styled.div`
     flex: 0 1 25%;
     flex-direction: column;
     /* margin-right: 3rem; */
+
+    @media screen and (max-width:900px){
+        flex: 0 1 50%;
+
+    }
+    @media screen and (max-width:500px){
+        flex: 0 1 100%;
+
+    }
     
 `
 
@@ -45,6 +93,12 @@ export const FooterP = styled.p`
     font-size: 1.4rem;
     margin:1rem  0rem;
     min-width: 20%;
+
+    @media screen and (max-width:400px){
+        font-size: 1.1rem;
+
+
+    }
 `
 export const FooterIconsContainer = styled.div`
         display: flex;
@@ -81,6 +135,14 @@ export const FooterContactUs = styled.div`
     flex: 0 1 30%;
     flex-direction: column;
     padding: 1rem 0 0 0;
+    @media screen and (max-width:900px){
+        flex: 0 1 50%;
+
+    }
+    @media screen and (max-width:500px){
+        flex: 0 1 100%;
+
+    }
 `
 export const FooterContactUsUnderline = styled.img`
     width: 30%;
@@ -117,6 +179,13 @@ export const FooterOpenHours = styled.div`
     background-repeat: no-repeat;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width:900px){
+        flex: 0 1 100%;
+        margin: 2rem 0;
+        padding: 2rem 0;
+
+    }
     `
 export const FooterOpenHrsRow = styled.div`
     display: flex;
@@ -128,6 +197,7 @@ export const FooterOpenHrsRow = styled.div`
     font-weight: ${props=> props.select?'bold':'initial'};
 `
 
+
 // ---------------------------------------- FOOTER Open Hours End-----------------------------------------------------------
 
 
@@ -138,6 +208,38 @@ export const FooterSecondary = styled.div`
     padding: 2rem 20rem;
     /* margin-top: auto; */
     font-size: 1.5rem;
+
+    @media screen and (max-width:1400px){
+        padding: 2rem 10rem;
+        font-size: 1.2rem;
+
+    }
+   
+    /* styled for screen size 1200px or less */
+    @media screen and (max-width:1200px){
+        padding: 2rem 7rem;
+
+    }
+    @media screen and (max-width:1000px){
+        padding: 2rem 1.5rem;
+
+    }
+
+    @media screen and (max-width:900px){
+        padding: 2rem 6rem;
+
+    }
+    @media screen and (max-width:760px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    @media screen and (max-width:400px){
+        padding: 1rem 2rem;
+
+    }
 `
 
 export const FooterCopyRight = styled.div`
@@ -150,6 +252,14 @@ export const FooterTerms = styled.div`
     flex: 0 1 30%;
     justify-content: flex-end;
 
+    @media screen and (max-width:900px){
+        flex: 0 1 40%;
+
+    }
+    @media screen and (max-width:400px){
+        flex: 0 1 40%;
+
+    }
     
 `
 export const FooterLink = styled(Link)`

@@ -14,6 +14,9 @@ export const HeaderContainer = styled.div`
     position: relative;
 
 
+    @media screen and (max-width:400px){
+        min-height: 40vh;
+    }
     
 
     &::before{
@@ -26,17 +29,52 @@ export const HeaderContainer = styled.div`
         background-color: rgb(0, 0, 0,.7);
     }
 `
+export const HeaderMainTitle = styled.p`
+    font-size: 5rem;
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    z-index: 5;
+    @media screen and (max-width:900px){
+        font-size: 4.5rem;
+    }
+    @media screen and (max-width:600px){
+        font-size: 4rem;
+    }
+    @media screen and (max-width:400px){
+        font-size: 3rem;
+    }
+    
+`
+export const HeaderSecondaryTitle = styled.p`
+    font-size: 1.5rem;
+    color: white;
+    font-weight: normal;
+    position: relative;
+    z-index: 5;
+    @media screen and (max-width:900px){
+        font-size: 1.3rem;
+    }
+`
 
 export const HeaderCaptionContainer = styled.div`
     display: flex;
     position: relative;
-    z-index: 1;
+    z-index: 5;
     min-height: 10vh;
     align-self: center;
     flex: 0 1 70%;
     flex-direction: column;
     /* background-color: red; */
     font-family: "Poppins", sans-serif;
+
+    @media screen and (max-width:760px){
+        flex: 0 1 80%;
+    }
+    @media screen and (max-width:400px){
+        flex: 0 1 90%;
+    }
+
 `
 export const HeaderSideImage = styled.img`
     position: absolute;
@@ -45,4 +83,15 @@ export const HeaderSideImage = styled.img`
     z-index: 1;
     height: auto;
     width: 15rem;
+
+    @media screen and (max-width:900px){
+        width: 13rem;
+        top: 56%;
+        left: 4%;
+
+    }
+    @media screen and (max-width:760px){
+        display: none;
+
+    }
 `

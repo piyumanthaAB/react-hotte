@@ -1,6 +1,6 @@
 import * as M from './HomePageElements';
 
-import { CustomHeading, CustomSpan,ColorSpan } from './../Headings/Headings';
+import { ColorSpan } from './../Headings/Headings';
 
 import { MdQueryBuilder } from "react-icons/md";
 
