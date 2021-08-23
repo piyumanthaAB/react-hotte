@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CustomSpan } from './../Components/Headings/Headings';
+import { ColorSpan } from './../Components/Headings/Headings';
 import Header from "../Components/Header/Header";
 import VideoAd from "../Components/VideoAd/VideoAd";
 import HeaderSecondary from "../Components/Header/HeaderSecondary";
@@ -53,7 +53,7 @@ const About = () => {
 
 
     const handleMission = () => {
-        setTitle(<>Hot<CustomSpan size={"4.2rem"} weight={"bold"} color={"#ff702a"}>te</CustomSpan> have 23+ years of experience.</>);
+        setTitle(<>Hot<ColorSpan>te</ColorSpan>  have 25+ years of experience.</>);
         setP1(
             <>Lorem ipsum dolor sit amet, consectetuer adipiscing elit dictum magna. Sed laoreet aliquam leo.
                 Ut tellus dolor, dapibus eget cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat.</>
@@ -65,7 +65,7 @@ const About = () => {
     }
 
     const handleStory = () => {
-        setTitle(<>Hot<CustomSpan size={"4.2rem"} weight={"bold"} color={"#ff702a"}>te</CustomSpan> have 30+ years of experience.</>);
+        setTitle(<>Hot<ColorSpan>te</ColorSpan>  have 20+ years of experience.</>);
         setP1("");
         setP2("");
     }

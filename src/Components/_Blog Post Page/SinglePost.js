@@ -1,5 +1,5 @@
 import * as B from './BlogPostElements';
-import { CustomHeading, CustomSpan } from './../Headings/Headings';
+import { CustomHeading,ColorSpan } from './../Headings/Headings';
 
 import PostImg from './../../img/detailsimg.png';
 
@@ -24,14 +24,13 @@ const SinglePost = () => {
                 <B.BlogPostLeftContainer>
                     
                     <B.PostContainer>
-                        <CustomHeading margin={"0 0 2rem"} size={"3rem"} weight={"600"} color={ "#232323"} lineHeight={"1.2"}>
+
+                        <B.PostTitle>
                             Best booking systems and table planners for restaurants.
-                        </CustomHeading>
-                        <CustomHeading margin={"0 0 2rem"} size={"1.4rem"} weight={"300"} color={ "#8c8784"} lineHeight={"1.2"}>
-                            <CustomSpan size={"1.4rem"} color={"#fc802a"}> By: Jenifer Lofez | </CustomSpan>
-                            
-                            Date: 25 August, 2020
-                        </CustomHeading>
+                        </B.PostTitle>
+                        <B.PostSubTitle>
+                            <ColorSpan>By: Jenifer Lofez | </ColorSpan>Date: 25 August, 2020
+                        </B.PostSubTitle>
 
                         <B.PostImageContainer>
                             <B.PostImage src={PostImg} />
@@ -42,7 +41,7 @@ const SinglePost = () => {
                             </B.PostImageDescription>
                         </B.PostImageContainer>
 
-                        <CustomHeading size={"1.4rem"} weight={"400"} color={ "#616161"} lineHeight={"1.6"}>
+                        <B.PostMainText>
                             When trying to get new customers keep your visitoers attenton peope only have time to check thin gse when they aren traveling
                             somen makes sense to have your site optimized ever possible device have timean and the Internet evergrowing ocean of information
                             ocean of information and it impera tive thate your site not only stand out visually to your visitors, but structurally search
@@ -57,62 +56,63 @@ const SinglePost = () => {
                             stand out visually to your visitors, but structurally search engines been built from the ground up using the
                             latest, semantic HTML5 markup,
                             allowing search engines easily distinguish where your main content starts and ends and easily distinguish.
-                        </CustomHeading>
+                        </B.PostMainText>
+                        
 
                     </B.PostContainer>
                     <B.PostFooter>
-                        <CustomHeading weight={"400"} size={"1.4rem"} color={ "#8c8784"}>
-                            <CustomSpan size={"1.4rem"} color={"#fc802a"} weight={"600"}>Tags:</CustomSpan>
-                            { ' '} Restaurant, Company, Food
-                        </CustomHeading>
+                        
+                        <B.PostTagText>
+                            <ColorSpan>Tags: </ColorSpan>Restaurant, Company, Food
+
+                        </B.PostTagText>
                         <B.PostIconContainer>
-                            <B.PostIcon to={'/'}> <FaFacebookF  /> </B.PostIcon>
-                            <B.PostIcon to={'/'}><FaSkype  /></B.PostIcon>
-                            <B.PostIcon to={'/'}><FaGooglePlusG  /></B.PostIcon>
+                            <B.PostIcon to={'/'}> <FaFacebookF /> </B.PostIcon>
+                            <B.PostIcon to={'/'}><FaSkype /></B.PostIcon>
+                            <B.PostIcon to={'/'}><FaGooglePlusG /></B.PostIcon>
                         </B.PostIconContainer>
                     </B.PostFooter>
 
                     <B.BlogCommentContainer>
-                        <CustomHeading weight={"600"} size={"3rem"} color={ "#232323"}>
-                            Comments :
-                        </CustomHeading>
+                        <B.BlogCommentTitle>Comments :</B.BlogCommentTitle>
+                        
                         <B.BlogCommentRow>
-                            <B.BlogCommentImg src={CommentImg_1} />
+                            <B.BlogCommentImageContainer>
+                                <B.BlogCommentImg src={CommentImg_1} />
+                            </B.BlogCommentImageContainer>
+                            
                             <B.BlogComment>
-                                <CustomHeading weight={"500"} size={"2.2rem"} color={ "#3c3c3c"}>
-                                    Kodins Creankis
-                                </CustomHeading>
-                                <CustomHeading margin={".3rem 0"} weight={"400"} size={"1.4rem"} color={ "#696969"}>
-                                    Business Man
-                                </CustomHeading>
-                                <CustomHeading margin={"1.2rem 0"} weight={"400"} size={"1.4rem"} color={ "#78787c"}>
+                                <B.BlogCommentHeading>Kodins Creankis</B.BlogCommentHeading>
+                                <B.BlogCommentSubHeading>Business Man</B.BlogCommentSubHeading>
+                                <B.BlogCommentText>
                                     When trying to get new customers keep your visitoers attenton peope only have time to check
                                     thin gse when they aren traveling somen
                                     makes sense to have your site optimized ever possible device have timean and the Internet.
-                                </CustomHeading>
+                                </B.BlogCommentText>
+                                
 
                             </B.BlogComment>
                         </B.BlogCommentRow>
                         <B.BlogCommentRow>
-                        <B.BlogCommentImg src={CommentImg_2} />
-                        <B.BlogComment>
-                                <CustomHeading weight={"500"} size={"2.2rem"} color={ "#3c3c3c"}>
-                                    Marien Tofaz
-                                </CustomHeading>
-                                <CustomHeading margin={".3rem 0"} weight={"400"} size={"1.4rem"} color={ "#696969"}>
-                                    Ceo, Drankes
-                                </CustomHeading>
-                                <CustomHeading margin={"1.2rem 0"} weight={"400"} size={"1.4rem"} color={ "#78787c"}>
-                                    When trying to get new customers keep your visitoers attenton peope only have time to check thin gse when they aren traveling
-                                    somen makes sense to have your site optimized ever possible device have timean and the Internet.
-                                </CustomHeading>
+                            <B.BlogCommentImageContainer>
+                                <B.BlogCommentImg src={CommentImg_2} />
+                            </B.BlogCommentImageContainer>
+                            <B.BlogComment>
+                                <B.BlogCommentHeading>Kodins Creankis</B.BlogCommentHeading>
+                                <B.BlogCommentSubHeading>Business Man</B.BlogCommentSubHeading>
+                                <B.BlogCommentText>
+                                    When trying to get new customers keep your visitoers attenton peope only have time to check
+                                    thin gse when they aren traveling somen
+                                    makes sense to have your site optimized ever possible device have timean and the Internet.
+                                </B.BlogCommentText>
+                                
 
                             </B.BlogComment>
                         </B.BlogCommentRow>
+                        
 
-                        <CustomHeading weight={"600"} size={"3rem"} margin={"0 0 2rem"} color={ "#232323"}>
-                            Leave a Comment :
-                        </CustomHeading>
+                        
+                        <B.BlogCommentTitle> Leave a Comment :</B.BlogCommentTitle>
 
                         <B.BlogCommentFormContainer>
                             <B.BlogCommentForm>
@@ -123,7 +123,7 @@ const SinglePost = () => {
                                     <FormInput type={"email"} placeholder={"Email:"} required />
                                 </B.BlogFormGroup>
                                 <B.BlogFormGroupTextArea>
-                                    <FormTextArea placeholder={"Message:"}  rows={"5"} required/>
+                                    <FormTextArea placeholder={"Message:"} rows={"5"} required />
                                 </B.BlogFormGroupTextArea>
                                 <B.BlogFormGroupTextArea>
                                     <FormSubmitBtn>Submit Now</FormSubmitBtn>
@@ -143,27 +143,27 @@ const SinglePost = () => {
                 <B.BlogPostRightContainer>
                     
                     <B.BlogPostCategoryContainer>
-                    <CustomHeading size={"2rem"} weight={"600"} color={"#232323"} margin={"0 0 2rem"} >Category</CustomHeading>
+                        <CustomHeading size={"2rem"} weight={"600"} color={"#232323"} margin={"0 0 2rem"} >Category</CustomHeading>
                         <B.BlogPostCategory>
-                            <CustomHeading weight={"400"} size={"1.6rem"} color={"#78787c"} >Fresh Ingrediants</CustomHeading>
+                            <B.BlogPostCategoryText >Fresh Ingrediants</B.BlogPostCategoryText>
                         </B.BlogPostCategory>
                         <B.BlogPostCategory>
-                            <CustomHeading weight={"400"} size={"1.6rem"} color={"#78787c"} >Thread With Brace</CustomHeading>
+                            <B.BlogPostCategoryText >Thread With Brace</B.BlogPostCategoryText>
                         </B.BlogPostCategory>
                         <B.BlogPostCategory>
-                            <CustomHeading weight={"400"} size={"1.6rem"} color={"#78787c"} >Pasta With Ragu</CustomHeading>
+                            <B.BlogPostCategoryText >Pasta With Ragu</B.BlogPostCategoryText>
                         </B.BlogPostCategory>
                         <B.BlogPostCategory>
-                            <CustomHeading weight={"400"} size={"1.6rem"} color={"#78787c"} >Grilled Fish</CustomHeading>
+                            <B.BlogPostCategoryText >Grilled Fish</B.BlogPostCategoryText>
                         </B.BlogPostCategory>
                         <B.BlogPostCategory>
-                            <CustomHeading weight={"400"} size={"1.6rem"} color={"#78787c"} >Fresh Ingredients</CustomHeading>
+                            <B.BlogPostCategoryText >Fresh Ingredients</B.BlogPostCategoryText>
                         </B.BlogPostCategory>
                         <B.BlogPostCategory>
-                            <CustomHeading weight={"400"} size={"1.6rem"} color={"#78787c"} >Thread With Brace</CustomHeading>
+                            <B.BlogPostCategoryText >Thread With Brace</B.BlogPostCategoryText>
                         </B.BlogPostCategory>
                         <B.BlogPostCategory>
-                            <CustomHeading weight={"400"} size={"1.6rem"} color={"#78787c"} >Pasta With Ragu</CustomHeading>
+                            <B.BlogPostCategoryText >Pasta With Ragu</B.BlogPostCategoryText>
                         </B.BlogPostCategory>
                     </B.BlogPostCategoryContainer>
                     
@@ -171,46 +171,39 @@ const SinglePost = () => {
                     <B.BlogRecentPostContainer>
                         <CustomHeading size={"2rem"} weight={"600"} color={"#232323"} margin={"0 0 2rem"}>Recent Post</CustomHeading>
                         
-                        <B.BlogRecentPost>
+                        <B.BlogRecentPost to={'/'}>
                             <B.BlogRecentPostImgContainer> <B.BlogRecentPostImg src={img_1} /> </B.BlogRecentPostImgContainer>
                             <B.BlogRecentPostDetailsContainer>
-                                
-                                <CustomHeading size={"1.5rem"} lineHeight={"1.6"} weight={"400"} color={"#ff702a"}>24 August, 2020</CustomHeading>
-                                <CustomHeading size={"1.5rem"} lineHeight={"1.6"} weight={"400"} color={"#646464"} >Grilled port the sample file ship with theme.</CustomHeading>
+                                <B.BlogRecentPostTitle>24 August, 2020</B.BlogRecentPostTitle>
+                                <B.BlogRecentPostTitleDesc>Grilled port the sample file ship with theme.</B.BlogRecentPostTitleDesc>
                                 
                             </B.BlogRecentPostDetailsContainer>
                         </B.BlogRecentPost>
-                        
-                        
-                        <B.BlogRecentPost>
+                        <B.BlogRecentPost to={'/'}>
                             <B.BlogRecentPostImgContainer> <B.BlogRecentPostImg src={img_2} /> </B.BlogRecentPostImgContainer>
                             <B.BlogRecentPostDetailsContainer>
-                                
-                                <CustomHeading size={"1.5rem"} lineHeight={"1.6"} weight={"400"} color={"#ff702a"}>24 August, 2020</CustomHeading>
-                                <CustomHeading size={"1.5rem"} lineHeight={"1.6"} weight={"400"} color={"#646464"} >Grilled port the sample file ship with theme.</CustomHeading>
+                                <B.BlogRecentPostTitle>24 August, 2020</B.BlogRecentPostTitle>
+                                <B.BlogRecentPostTitleDesc>Grilled port the sample file ship with theme.</B.BlogRecentPostTitleDesc>
                                 
                             </B.BlogRecentPostDetailsContainer>
                         </B.BlogRecentPost>
-                        
-                        <B.BlogRecentPost>
+                        <B.BlogRecentPost to={'/'}>
                             <B.BlogRecentPostImgContainer> <B.BlogRecentPostImg src={img_3} /> </B.BlogRecentPostImgContainer>
                             <B.BlogRecentPostDetailsContainer>
+                                <B.BlogRecentPostTitle>24 August, 2020</B.BlogRecentPostTitle>
+                                <B.BlogRecentPostTitleDesc>Grilled port the sample file ship with theme.</B.BlogRecentPostTitleDesc>
                                 
-                                <CustomHeading size={"1.5rem"} lineHeight={"1.6"} weight={"400"} color={"#ff702a"}>24 August, 2020</CustomHeading>
-                                <CustomHeading size={"1.5rem"} lineHeight={"1.6"} weight={"400"} color={"#646464"} >Grilled port the sample file ship with theme.</CustomHeading>
+                            </B.BlogRecentPostDetailsContainer>
+                        </B.BlogRecentPost>
+                        <B.BlogRecentPost to={'/'}>
+                            <B.BlogRecentPostImgContainer> <B.BlogRecentPostImg src={img_4} /> </B.BlogRecentPostImgContainer>
+                            <B.BlogRecentPostDetailsContainer>
+                                <B.BlogRecentPostTitle>24 August, 2020</B.BlogRecentPostTitle>
+                                <B.BlogRecentPostTitleDesc>Grilled port the sample file ship with theme.</B.BlogRecentPostTitleDesc>
                                 
                             </B.BlogRecentPostDetailsContainer>
                         </B.BlogRecentPost>
                         
-                        <B.BlogRecentPost>
-                            <B.BlogRecentPostImgContainer> <B.BlogRecentPostImg src={img_4} /> </B.BlogRecentPostImgContainer>
-                            <B.BlogRecentPostDetailsContainer>
-                                
-                                <CustomHeading size={"1.5rem"} lineHeight={"1.6"} weight={"400"} color={"#ff702a"}>24 August, 2020</CustomHeading>
-                                <CustomHeading size={"1.5rem"} lineHeight={"1.6"} weight={"400"} color={"#646464"} >Grilled port the sample file ship with theme.</CustomHeading>
-                                
-                            </B.BlogRecentPostDetailsContainer>
-                        </B.BlogRecentPost>
 
                     </B.BlogRecentPostContainer>
                 
@@ -220,22 +213,22 @@ const SinglePost = () => {
                             
                         <B.TagsWrapper>
                             <B.BlogPopularTag>
-                                  Food
+                                Food
                             </B.BlogPopularTag>
                             <B.BlogPopularTag>
-                                  Restaurent
+                                Restaurent
                             </B.BlogPopularTag>
                             <B.BlogPopularTag>
-                                  Chicken Food
+                                Chicken Food
                             </B.BlogPopularTag>
                             <B.BlogPopularTag>
-                                  Health Care
+                                Health Care
                             </B.BlogPopularTag>
                             <B.BlogPopularTag>
-                                  Beef Burger
+                                Beef Burger
                             </B.BlogPopularTag>
                             <B.BlogPopularTag>
-                                  Take Away
+                                Take Away
                             </B.BlogPopularTag>
                                 
                         </B.TagsWrapper>
@@ -247,7 +240,7 @@ const SinglePost = () => {
 
             </B.BlogPostContainer>
         </>
-     );
+    );
 }
  
 export default SinglePost;
