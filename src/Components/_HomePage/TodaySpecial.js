@@ -2,13 +2,13 @@ import * as T from './HomePageElements';
 import { ColorSpan} from './../Headings/Headings';
 import specialImg from './../../img/Todayspecialimg.png';
 import donut from './../../img/donut.png';
-
 import { MdQueryBuilder } from "react-icons/md";
 
 import { useState } from 'react';
 
 const TodaySpecial = () => {
 
+    
     const [qty, setQty] = useState(1);
 
     const HandleQty = (val,op) => {
@@ -20,8 +20,8 @@ const TodaySpecial = () => {
     }
 
     return (
-        <>
-            <T.TodaySpecialContainer>
+        
+            <T.TodaySpecialContainer data-aos="fade-up" data-aos-duration="500">
                 <T.TodaySpecialLeft>
                     <T.TodaySpecialLeftImg src={specialImg} />
                 </T.TodaySpecialLeft>
@@ -74,7 +74,7 @@ const TodaySpecial = () => {
 
                 </T.TodaySpecialRight>
             </T.TodaySpecialContainer>
-        </>
+        
      );
 }
  

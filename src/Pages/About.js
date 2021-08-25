@@ -21,6 +21,7 @@ import { AboutChefsImg } from './../Components/_About Page/AboutPageElements';
 import ToTopBtn from "../Components/Button/ToTopBtn";
 
 import useShowBtn  from './../Hooks/useShowBtn';
+import { motion } from 'framer-motion';
 
 const About = () => {
 
@@ -141,15 +142,18 @@ const About = () => {
 
     const showBtn = useShowBtn();
 
+
+    
+
     return (
-        <>
+        <motion.div >
             <Header mainTitle={"About"} secondaryTitle={"About"} />
             <HeaderSecondary  data={seconadryHeadingData} />
             <AboutStory Title={Title} P1={P1} P2={P2} handleMission={handleMission} handleStory={ handleStory} handleVision={handleVision} />
             <AboutChefs data={chefsData} />
             <VideoAd />
             <ToTopBtn show={showBtn} />
-        </>    
+        </motion.div>    
      );
 }
  

@@ -5,12 +5,12 @@ import * as B from './BlogPageElements';
 const BlogCards = (props) => {
     return (
         <>
-            <B.BlogCradsContainer>
+            <B.BlogCradsContainer >
                 
                 {
                     props.blogs.map((blog, idx) => {
                         return (
-                            <B.BlogCard key={idx} >
+                            <B.BlogCard key={idx} data-aos="zoom-out-up">
                                 <B.BlogCardTop>
                                     {blog.image}
                                     {/* <B.BlogCardImg src={img_1} /> */}

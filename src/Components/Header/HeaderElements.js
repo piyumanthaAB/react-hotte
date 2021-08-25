@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 import HeaderCover from './../../img/header.jpg';
 
 
@@ -57,7 +57,7 @@ export const HeaderSecondaryTitle = styled.p`
     }
 `
 
-export const HeaderCaptionContainer = styled.div`
+export const HeaderCaptionContainer = styled(motion.div)`
     display: flex;
     position: relative;
     z-index: 5;

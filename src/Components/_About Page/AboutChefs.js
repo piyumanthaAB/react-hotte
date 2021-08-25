@@ -29,7 +29,7 @@ const AboutChefs = (props) => {
                             props.data.map((chef, idx) => {
                                 return (
                                    
-                                    <A.AboutChefsCard key={idx}>
+                                    <A.AboutChefsCard key={idx} data-aos="zoom-out-up" >
                             
                                         <A.AboutChefsCardImgContainer>
                                             

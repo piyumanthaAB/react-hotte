@@ -26,6 +26,8 @@ import cust_2 from './../img/customer2.png';
 import cust_3 from './../img/customer3.png';
 import cust_4 from './../img/customer4.png';
 
+import { motion } from "framer-motion";
+
 const Home = () => {
 
     const seconadryHeadingData = [
@@ -119,8 +121,18 @@ const Home = () => {
         },
     ]
 
+    const HomeVariants = {
+        
+        exit: {
+            opacity:0,
+            transition: {
+                ease: 'easeInOut'
+            }
+        }
+    }
+
     return (
-        <>
+        <motion.div variants={HomeVariants}  >
             <HomeHeader />
             <TodaySpecial />
             <HomeSecondaryHeadingConainer>
@@ -131,7 +143,7 @@ const Home = () => {
             <Carousel data={ carouselSlideData}/>
             <VideoAd />
             <ToTopBtn show={showBtn} />
-        </>
+        </motion.div>
      );
 }
  

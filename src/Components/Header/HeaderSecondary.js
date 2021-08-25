@@ -16,7 +16,7 @@ const HeaderSecondary = (props) => {
                 {props.data.map((el,idx) => {
                     
                     return (
-                        <S.SecondaryInfoElement key={idx}>
+                        <S.SecondaryInfoElement key={idx} data-aos="zoom-in-left" data-aos-anchor-placement="top-bottom">
                     
                             <S.SecondaryIcon>
                                 {renderIcon(el.icon)}

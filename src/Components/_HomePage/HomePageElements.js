@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Link as ScrollLink } from 'react-scroll';
 import cover from './../../img/hotte_homebg.jpg';
 import TodaysOfferCover from './../../img/offerbgimg.jpg';
+import { motion } from "framer-motion";
 
 //==================================== Header Elements Start =================================
 
@@ -185,6 +186,10 @@ export const HomeHeaderUnderlinedSpan = styled.span`
     border-bottom: 2px solid #ec5a12;
     
 `
+export const HomeHeaderLinkBtnContainer = styled(motion.div)`
+    width: fit-content;
+    border-radius: 50rem;
+`
 
 export const HomeHeaderLinkBtn = styled(ScrollLink)`
     max-width: max-content;
@@ -221,7 +226,7 @@ export const HomeHeaderLinkBtn = styled(ScrollLink)`
 
 //==================================== Today Special Elements Start =================================
 
-export const TodaySpecialContainer = styled.div`
+export const TodaySpecialContainer = styled(motion.div)`
     min-height: 70vh;
     background-color: white;
     /* background-color: yellow; */

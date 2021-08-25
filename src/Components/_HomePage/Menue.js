@@ -7,8 +7,8 @@ import { MdQueryBuilder } from "react-icons/md";
 
 const Menue = (props) => {
     return (
-        <>
-            <M.MenueContainer id="menue">
+        
+            <M.MenueContainer id="menue" >
                 <M.MenueTitleContainer>
                     <M.MenueTitle>
                         Regular Menu’s of <ColorSpan> Hotte. </ColorSpan> 
@@ -19,11 +19,11 @@ const Menue = (props) => {
 
                     
                 </M.MenueTitleContainer>
-                <M.MenueCardsContainer>
+                <M.MenueCardsContainer >
                     {props.data.map((el, idx) => {
                         return (
                             
-                                <M.MenueCard key={idx}>
+                                <M.MenueCard key={idx} data-aos="zoom-out-up">
                                     <M.MenueImageContainer>
                                         <M.MenueImage src={el.img} />
                                     </M.MenueImageContainer>
@@ -72,7 +72,7 @@ const Menue = (props) => {
                     
                 </M.MenueCardsContainer>
             </M.MenueContainer>
-        </>
+        
      );
 }
  

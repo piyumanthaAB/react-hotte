@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 
 
-export const NavbarContainer = styled.div`
+export const NavbarContainer = styled(motion.div)`
     position: fixed;
     top: 0;
     left: 0;

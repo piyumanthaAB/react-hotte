@@ -1,5 +1,7 @@
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {  Route, Switch, useLocation } from 'react-router-dom';
 import Home from './Pages/Home';
 import Blog from './Pages/Blog';
 import About from './Pages/About';
@@ -12,15 +14,21 @@ import Footer from './Components/Footer/Footer';
 
 import ScrollToTop from './Hooks/useScrollTop';
 
+import { AnimatePresence } from 'framer-motion';
+
 function App() {
+
+  AOS.init();
+  const location = useLocation();
+
   return (
-    <Router>
-      <ScrollToTop >
-        <div className="App">
-          <Navbar />
-        
-          <div className="content">
-            <Switch>
+    <ScrollToTop >
+      <div className="App">
+        <Navbar />
+          
+        <div className="content">
+          <AnimatePresence>
+            <Switch location={location} key={location.key}>
               <Route exact path='/'>
                 <Home />
               </Route>
@@ -39,13 +47,13 @@ function App() {
               <Route path='*'>
                 <Error />
               </Route>
-
             </Switch>
-          </div>
-          <Footer />
+              
+          </AnimatePresence>
         </div>
-      </ScrollToTop>
-    </Router>
+        <Footer />
+      </div>
+    </ScrollToTop>
   );
 }
 
