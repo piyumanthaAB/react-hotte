@@ -19,6 +19,7 @@ import { AnimatePresence } from 'framer-motion';
 function App() {
 
   AOS.init();
+  AOS.refresh();
   const location = useLocation();
 
   return (
